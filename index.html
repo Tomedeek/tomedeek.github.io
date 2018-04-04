@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="diary">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="prod/style.css">
+
+</head>
+<body ng-controller="diaryController as ctrl">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 left-col">
+            <h2>DAIRY APP</h2>
+            <p>Comment with no sense</p>
+        </div>
+
+        <div class="col-3"></div>
+
+        <div class="col-4">
+            <span>
+                <h3>Items</h3>
+                <input type="text" placeholder="Tape name here..." ng-model="ctrl.nameItems">
+                <input type="submit" value="Add new" ng-click="ctrl.addItems()">
+
+                <ul>
+                    <li ng-repeat="item in ctrl.listItems track by $index" class="line">
+                        <a href="" ng-click="ctrl.showComments($index)" class="article">{{item.text}}</a>
+                        <span class="sumComments">{{item.comments.length}}</span>
+                        <a href="" ng-click="ctrl.delItems($index)" class="del">Delete</a>
+                    </li>
+                </ul>
+
+            </span>
+        </div>
+
+        <div class="col-4" ng-if="ctrl.arrActiveItem">
+            <span>
+                <h3>Comments #{{ctrl.numItem + 1}}</h3>
+                <ul>
+                    <li ng-repeat="item in ctrl.listItems[ctrl.numItem].comments track by $index">
+                        <img src="img/image.png" class="sqCom">
+                        <span class="comment">{{item.comment}}</span>
+                        <hr>
+                    </li>
+                </ul>
+                <img src="img/image.png">
+                <textarea name="" id="" cols="25" rows="3" ng-model="comment" ng-keydown="ctrl.keyStart($event.keyCode)"
+                          ng-keyup="ctrl.keydown($event.keyCode, comment)"></textarea>
+            </span>
+        </div>
+    </div>
+</div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="prod/main.js"></script>
+</body>
+</html>
