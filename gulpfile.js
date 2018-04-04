@@ -3,7 +3,6 @@ var gulp = require('gulp'),
 
 gulp.task('scripts', function () {
     gulp.src([
-        './node_modules/angular/angular.min.js',
         './src/app.js',
         './src/**/*.js'
     ])
