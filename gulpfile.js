@@ -1,8 +1,9 @@
 var gulp = require('gulp'),
-    concat = require('gulp-concat')
+    concat = require('gulp-concat'),
 
 gulp.task('scripts', function () {
     gulp.src([
+        './node_modules/angular/angular.min.js',
         './src/app.js',
         './src/**/*.js'
     ])
