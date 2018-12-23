@@ -56,7 +56,6 @@ li {
     border: 2px solid #FF0000;
     margin-top: 8px;
     margin-right: 5px;
-    float: right;
 }
 
 .article {
@@ -74,21 +73,21 @@ li {
 
 }
 
-.sqCom {
-    margin: 10px 10px 10px 0;
+/*.sqCom {*/
+    /*margin: 10px 10px 10px 0;*/
 
-}
+/*}*/
 
-.comment {
-    width: 250px;
-    margin-right: 30px;
-    float: right;
-    font-size: 12px;
-}
+/*.comment {*/
+    /*width: 250px;*/
+    /*margin-right: 30px;*/
+    /*float: right;*/
+    /*font-size: 12px;*/
+/*}*/
 
 textarea {
     border: 2px solid #f1f1f1;
-    float: right;
+    /*float: right;*/
 }
 
 textarea, hr {
